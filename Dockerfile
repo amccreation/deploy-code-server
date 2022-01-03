@@ -36,10 +36,12 @@ RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
 RUN sudo apt-get install -y nodejs
 # Install apt packages:
 RUN sudo apt-get install -y ubuntu-make
-
+chown -R root:root /usr/bin/sudo
 # Copy files: 
 # COPY deploy-container/myTool /home/coder/myTool
 
+#install wget
+RUN apt-get install wget
 # -----------
 
 # Port
